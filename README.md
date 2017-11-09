@@ -1,4 +1,12 @@
-# Installation
+# Coursework-1
+
+## About
+The first **WORK** is accomplished in __"Home"__ controller, and the second **WORK** is accomplished in __"Todos"__ controller.
+
+## Project Address on Cloud
+Please check my coursework at heroku -- [CLICK HERE](https://hidden-sierra-13839.herokuapp.com)
+
+## Local Installation
 
 1. 克隆该项目至本地
 ```

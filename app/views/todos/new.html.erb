@@ -1,0 +1,15 @@
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation"><%= link_to 'Home', controller: 'home' %></li>
+      <li role="presentation" class="active"><%= link_to 'Todos', controller: 'todos' %></li>
+    </ul>
+  <nav>
+  <h3 class="text-muted">Yang's Zone</h3>
+</div>
+
+<h3>New Todo</h3>
+<%= render 'form' %>
+<p>
+<%= link_to 'Back to View All Todos', todos_path, class: "btn btn-info" %>
+</p>

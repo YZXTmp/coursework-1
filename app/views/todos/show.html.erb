@@ -1,0 +1,30 @@
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation"><%= link_to 'Home', controller: 'home' %></li>
+      <li role="presentation" class="active"><%= link_to 'Todos', controller: 'todos' %></li>
+    </ul>
+  <nav>
+  <h3 class="text-muted">Yang's Zone</h3>
+</div>
+
+
+
+<p class="lead">
+  <strong>Deadline:</strong>
+  <%= @todo.deadline %>
+</p>
+
+<p class="lead">
+  <strong>Importance:</strong>
+  <%= @importance_apr[@todo.importance] %>
+</p>
+
+<p class="lead">
+  <strong>What to do:</strong>
+  <%= @todo.what_to_do %>
+</p>
+<p class="text-center">
+<%= link_to 'Edit', edit_todo_path(@todo), class: "btn btn-primary" %>
+<%= link_to 'Back to View All Todos', todos_path, class: "btn btn-info" %>
+</p>

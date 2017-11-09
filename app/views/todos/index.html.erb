@@ -1,0 +1,43 @@
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation"><%= link_to 'Home', controller: 'home' %></li>
+      <li role="presentation" class="active"><%= link_to 'Todos', controller: 'todos' %></li>
+    </ul>
+  <nav>
+  <h3 class="text-muted">Yang's Zone</h3>
+</div>
+ 
+<table class="table table-striped">
+  <tr>
+    <th>#</th>
+    <th>Importance</th>
+    <th>What to do</th>
+    <th>Deadline</th>
+    <th colspan="3">Options</th>
+  </tr>
+ 
+  <% @time=0 %>
+  <% @todos.each do |todo| %>
+    <% @time+=1 %>
+    <tr>
+      <td><%= @time %></td>
+      <td><%= @importance_apr[todo.importance] %></td>
+      <td><%= todo.what_to_do %></td>
+      <td><%= todo.deadline %></td>
+      <td><%= link_to 'Show', todo_path(todo), class: "btn btn-default btn-xs" %></td>
+      <td><%= link_to 'Edit', edit_todo_path(todo), class: "btn btn-primary btn-xs" %></td>
+      <td>
+        <%= link_to 'Destroy', todo_path(todo),
+            method: :delete,
+            data: { confirm: 'Are you sure to destroy this TODO?' },
+            class: "btn btn-danger btn-xs"
+        %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<p>
+<%= link_to 'New Todo', new_todo_path, class: "btn btn-success" %>
+<%= link_to 'Back to the Homepage...', {controller: 'home', action: 'index'}, class: "btn btn-info" %>
+</p>

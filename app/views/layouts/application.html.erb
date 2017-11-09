@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yang's Zone</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+        function NowDateTime()
+        {
+            var datetime=new Date()
+            var Year=datetime.getFullYear()
+            var Month=datetime.getMonth()+1
+            var Day=datetime.getDate()
+            var time=datetime.toLocaleTimeString()
+            document.getElementById('Datetime_Now').innerHTML="Now The Date & Time is ...  "+Year+"年"+Month+"月"+Day+"日"+" "+time
+        }
+        setInterval("NowDateTime()",1000)
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+
+
+      <%= yield %>
+
+
+      <footer class="footer">
+        <p>&copy; 2017 Yang.</p>
+      </footer>
+    </div>
+  </body>
+</html>

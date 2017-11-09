@@ -1,6 +1,6 @@
 # Installation
 
-1. 克隆改仓库至本地
+1. 克隆该项目至本地
 ```
 $ git clone git@github.com:YZXTmp/coursework-1.git
 ```
